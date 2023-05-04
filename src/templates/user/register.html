@@ -1,0 +1,64 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+{% extends 'user/regindex.html' %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="regm" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="779" border="0"class="table table-striped">
+    <!--<tr>-->
+      <!--<th colspan="2" scope="row">REGISTER</th>-->
+    <!--</tr>-->
+    <tr>
+      <th width="530" scope="row">FIRST NAME</th>
+      <td width="231"><input type="text" name="textfield" pattern="[A-Z a-z.]{3,25}" /></td>
+    </tr>
+    <tr>
+      <th width="530" scope="row">LAST NAME</th>
+      <td width="231"><input type="text" name="textfield2" pattern="[A-Z a-z.]{3,25}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">EMAIL</th>
+      <td><input type="text" name="textfield3" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">PHONE</th>
+      <td><input type="text" name="textfield4" required pattern="[6789][0-9]{9}" /></td>
+    </tr>
+
+
+ 
+
+    <tr>
+      <th scope="row">PLACE</th>
+      <td><input type="text" name="textfield5"pattern="[A-Z a-z.]{3,25}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">POST</th>
+      <td><input type="text" name="textfield6"pattern="[A-Z a-z.]{3,25}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">PIN</th>
+      <td><input type="text" name="textfield7"required pattern="[0-9]{6}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">USERNAME</th>
+      <td><input type="text" name="textfield8"required /></td>
+    </tr>
+    <tr>
+      <th scope="row">PASSWORD</th>
+      <td><input type="text" name="textfield9"required /></td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row"><input type="submit" name="Submit" value="Register" /></th>
+    </tr>
+  </table>
+
+</form>
+</body>
+<!--</html>-->
+{% endblock %}

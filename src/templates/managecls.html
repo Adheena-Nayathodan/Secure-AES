@@ -1,0 +1,36 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+{% extends 'adminindex.html' %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" class="table">
+    <tr>
+      <th scope="col">From time </th>
+      <th scope="col">To time </th>
+      <th scope="col">Date</th>
+      <th scope="col">Subject</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+      {% for i in val %}
+    <tr>
+      <th scope="row">{{i['from_time']}}</th>
+      <td>{{i['to_time']}}</td>
+      <td>{{i['date']}}</td>
+      <td>{{i['subject']}}</td>
+      <td><p><a href="editcls?id={{i['cid']}}">edit</a></p>
+          <p><a href="dltcl?id={{i['cid']}}">delete</a></p></td>
+    </tr>
+      {% endfor %}
+    <tr>
+      <th colspan="5" scope="row"><a href="addcls#about">ADD</a></th>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

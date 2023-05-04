@@ -1,0 +1,45 @@
+
+{% extends 'adminindex.html' %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="editcl">
+  <table width="231" border="1" class="table">
+    <tr>
+      <th width="71" scope="col">From time </th>
+      <th width="144" scope="col"><label>
+        <input type="text" name="textfield" value="{{val['from_time']}}" />
+      </label></th>
+    </tr>
+    <tr>
+      <th scope="row">To time </th>
+      <td><label>
+        <input type="text" name="textfield2" value="{{val['to_time']}}" />
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Date</th>
+      <td><label>
+        <input type="text" name="textfield3" value="{{val['date']}}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Subject</th>
+       <td><label>
+        <input type="text" name="textfield4" value="{{val['subject']}}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row"><label>
+        <input type="submit" name="Submit" value="Edit" />
+      </label></th>
+    </tr>
+  </table>
+</form>
+</body>
+<!--</html>-->
+{% endblock %}
